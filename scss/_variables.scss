@@ -2,6 +2,12 @@
 
 $text-color : #251e2b;
 $pill-color : lighten($text-color, 65%);
+$shadow : 8px 8px 20px 4px rgba(0,0,0,0.6);
+
+$breakpoints: (phone: 640px,
+        tablet: 768px,
+        desktop: 1024px) !default;
+
 
 @mixin header-background-image {
   height: 722px;

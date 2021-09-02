@@ -31,12 +31,43 @@
   left: 0;
 }
 
-.parallax-base {
-  transform: translateZ(0);
+.parallax-back {
+  transform: translateZ(-2px) scale(2.5);
 }
 
-.parallax-back {
-  transform: translateZ(-1px) scale(1.5);
+#top-btn {
+  display: inline-block;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 40px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: black;
+  /* Set a background color */
+  opacity: 80%;
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+  transition: all 1s ease 0s;
+  width: 50px;
+  height: 35px;
+}
+
+.hide-top-btn {
+  right: -60px !important;
+  /* Place the button 30px from the right */
 }
 
 .main-area {
@@ -48,20 +79,34 @@
 .main-area .background-images {
   height: 80px;
 }
+.main-area .profile-image-area {
+  margin-bottom: 15px;
+}
+.main-area .profile-image-area img {
+  box-shadow: 8px 8px 20px 4px rgba(0, 0, 0, 0.6) !important;
+}
+.main-area .hide-nav {
+  top: -100px;
+}
+.main-area nav {
+  transition: all 1s ease 0s;
+  margin-bottom: 20px;
+}
 .main-area nav ul {
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .main-area nav ul li {
+  box-shadow: 8px 8px 20px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
+  border-radius: 50px;
   height: fit-content;
-  width: 400px;
   background: darkslateblue;
   opacity: 0.9;
 }
 .main-area nav ul li:not(:last-child) {
-  border-right: 1px solid black;
+  margin-right: 15px;
 }
 .main-area nav ul li a {
   font-size: 28px;
@@ -79,6 +124,7 @@
   /* for Safari */
   background-clip: padding-box;
   /* for IE9+, Firefox 4+, Opera, Chrome */
+  overflow: hidden;
   position: relative;
 }
 .main-area section:not(.top-area) {
@@ -98,6 +144,8 @@
   position: absolute;
   background-size: cover;
   z-index: -1;
+  transform: translateZ(-1px) scale(2);
+  background-position: 50% 0;
 }
 .main-area section h1 {
   color: #251e2b;
@@ -139,23 +187,17 @@
   background-image: url("/img/header-background.jpg");
 }
 
-#about-me {
-  position: relative;
-}
 #about-me::after {
   background-image: url("/img/about-me-background.jpg");
+  transform: translateZ(-1px) scale(2);
 }
 #about-me .about-me-area {
   height: 1000px;
 }
 
-#my-skills {
-  position: relative;
-}
 #my-skills::after {
-  background-size: contain;
-  rotation: 90deg;
   background-image: url("/img/roses-background.jpg");
+  top: -250px;
 }
 #my-skills .my-skills-area {
   height: 1000px;

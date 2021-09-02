@@ -149,6 +149,14 @@
   height: 1000px;
 }
 
+#my-skills {
+  position: relative;
+}
+#my-skills::after {
+  background-size: contain;
+  rotation: 90deg;
+  background-image: url("/img/roses-background.jpg");
+}
 #my-skills .my-skills-area {
   height: 1000px;
 }

@@ -126,6 +126,12 @@
 
 
 #my-skills{
+  position: relative;
+  &::after{
+    background-size: contain;
+    rotation: 90deg;
+    background-image: url('/img/roses-background.jpg');
+  }
   .my-skills-area {
     height: 1000px;
   }

@@ -1,0 +1,19 @@
+/*Variables*/
+
+$text-color : #251e2b;
+$pill-color : lighten($text-color, 65%);
+
+@mixin header-background-image {
+  height: 722px;
+  color: white;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: absolute;
+  content: ' ';
+}

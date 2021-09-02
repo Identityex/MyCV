@@ -1,0 +1,12 @@
+.background-code{
+  position: absolute;
+  z-index: -10;
+  code{
+    font-size: xx-large;
+    margin: auto;
+    z-index: -10;
+  }
+}
+.hljs{
+  background: none !important;
+}

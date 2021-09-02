@@ -1,0 +1,160 @@
+@import "variables";
+
+.parallax {
+  perspective-origin-x: 100%;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: RGBA(20,20,20,1);
+}
+.parallax-layer {
+  position: absolute;
+  transform-origin-x: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-base {
+  transform: translateZ(0);
+}
+.parallax-back {
+  transform: translateZ(-1px) scale(1.5);
+}
+
+
+.main-area{
+  background-color: RGBA(150,150,150,0.4);
+  width: 100%;
+  top: 0;
+  height: fit-content;
+  .background-images {
+    height: 80px;
+  }
+
+  nav{
+    ul {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      li {
+        &:not(:last-child){
+          border-right: 1px solid black ;
+        }
+        text-align: center;
+        a{
+          &:hover, &:focus{
+            color: lighten(orangered, 20%);
+          }
+          font-size: 28px;
+          text-decoration: none;
+          color: orangered;
+        }
+        height: fit-content;
+        width: 400px;
+        background: darkslateblue;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .top-area{
+    padding-top: 50px;
+  }
+  section {
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+
+    &:not(.top-area){
+      border-top: 5px $text-color solid;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    position: relative;
+    &::after{
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.2;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    h1{
+      color : $text-color;
+      width: 300px;
+      margin:auto;
+      background-color: $pill-color;
+      padding: 15px;
+      border-radius: 50px;
+      text-align: center;
+    }
+  }
+  nav {
+  }
+}
+
+.background-images{
+
+  &::before {
+    @include header-background-image;
+    background-image: url("/img/header-2-background.jpg");
+  }
+  &::after {
+    @include header-background-image;
+    background-image: url("/img/header-background.jpg");
+  }
+}
+
+#about-me{
+  position: relative;
+  &::after{
+    background-image: url('/img/about-me-background.jpg');
+  }
+  .about-me-area {
+    height: 1000px;
+  }
+}
+
+
+#my-skills{
+  .my-skills-area {
+    height: 1000px;
+  }
+}
+
+#employment-history{
+  .employment-history-area {
+    height: 1000px;
+  }
+}
+
+
+#current-projects{
+
+  .current-projects-area {
+    height: 1000px;
+  }
+}
+
+
+#references{
+  .references-area {
+    height: 1000px;
+  }
+}
+
+
+#my-goals{
+  .my-goals-area {
+    height: 1000px;
+  }
+}

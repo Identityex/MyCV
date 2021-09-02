@@ -1,0 +1,172 @@
+.background-code {
+  position: absolute;
+  z-index: -10;
+}
+.background-code code {
+  font-size: xx-large;
+  margin: auto;
+  z-index: -10;
+}
+
+.hljs {
+  background: none !important;
+}
+
+/*Variables*/
+.parallax {
+  perspective-origin-x: 100%;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: RGBA(20, 20, 20, 1);
+}
+
+.parallax-layer {
+  position: absolute;
+  transform-origin-x: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-base {
+  transform: translateZ(0);
+}
+
+.parallax-back {
+  transform: translateZ(-1px) scale(1.5);
+}
+
+.main-area {
+  background-color: RGBA(150, 150, 150, 0.4);
+  width: 100%;
+  top: 0;
+  height: fit-content;
+}
+.main-area .background-images {
+  height: 80px;
+}
+.main-area nav ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.main-area nav ul li {
+  text-align: center;
+  height: fit-content;
+  width: 400px;
+  background: darkslateblue;
+  opacity: 0.9;
+}
+.main-area nav ul li:not(:last-child) {
+  border-right: 1px solid black;
+}
+.main-area nav ul li a {
+  font-size: 28px;
+  text-decoration: none;
+  color: orangered;
+}
+.main-area nav ul li a:hover, .main-area nav ul li a:focus {
+  color: #ff8f66;
+}
+.main-area .top-area {
+  padding-top: 50px;
+}
+.main-area section {
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
+  position: relative;
+}
+.main-area section:not(.top-area) {
+  border-top: 5px #251e2b solid;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.main-area section::after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
+.main-area section h1 {
+  color: #251e2b;
+  width: 300px;
+  margin: auto;
+  background-color: #cbc1d4;
+  padding: 15px;
+  border-radius: 50px;
+  text-align: center;
+}
+.background-images::before {
+  height: 722px;
+  color: white;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: absolute;
+  content: " ";
+  background-image: url("/img/header-2-background.jpg");
+}
+.background-images::after {
+  height: 722px;
+  color: white;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: absolute;
+  content: " ";
+  background-image: url("/img/header-background.jpg");
+}
+
+#about-me {
+  position: relative;
+}
+#about-me::after {
+  background-image: url("/img/about-me-background.jpg");
+}
+#about-me .about-me-area {
+  height: 1000px;
+}
+
+#my-skills .my-skills-area {
+  height: 1000px;
+}
+
+#employment-history .employment-history-area {
+  height: 1000px;
+}
+
+#current-projects .current-projects-area {
+  height: 1000px;
+}
+
+#references .references-area {
+  height: 1000px;
+}
+
+#my-goals .my-goals-area {
+  height: 1000px;
+}
+
+/*# sourceMappingURL=compiled.css.map */

@@ -80,15 +80,20 @@ $(document).ready(function () {
         let skills = $('.skill');
         let category = $(this).data('category');
 
-        skills.each(function (index, item) {
-           if(item.data('categories').contains(category))
-           {
-               $(item).addClass('hide');
-           }
-           else{
-               $(item).removeClass('hide');
-           }
+        skills.removeClass('is-animated').fadeOut().finish().promise().done(function() {
+            if(category)
+            {
+                skills = skills.filter(function (index, skill) { return $(skill).data('categories').indexOf(category) >= 0 });
+            }
+
+            skills.removeClass('is-animated')
+                .fadeOut().finish().promise().done(function() {
+                skills.each(function(i) {
+                    $(this).addClass('is-animated').delay((i++) * 200).fadeIn();
+                });
+            });
         });
+
     });
 
     let maxLevel = 5;

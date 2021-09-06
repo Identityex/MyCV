@@ -1,55 +1,59 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="scss/css/normalize.css">
-  <link rel="stylesheet" href="scss/css/main_file.css">
+    <link rel="stylesheet" href="scss/css/normalize.css">
+    <link rel="stylesheet" href="scss/css/main_file.css">
 
-  <meta name="theme-color" content="#fafafa">
-  <link rel="stylesheet" href="scss/css/bootstrap.css">
-  <link rel="stylesheet" href="scss/compiled.css" />
-  <link rel="stylesheet" href="scss/css/bootstrap.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-grid.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-grid.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-reboot.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-utilities.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-utilities.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-reboot.rtl.css">
-  <link rel="stylesheet" href="js/vendor/styles/github-dark.min.css">
-  <link rel="stylesheet" href="scss/css/all.min.css">
-</head>
-<body>
+    <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" href="scss/css/bootstrap.css">
+    <link rel="stylesheet" href="scss/compiled.css" />
+    <link rel="stylesheet" href="scss/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="scss/css/bootstrap-reboot.rtl.css">
+    <link rel="stylesheet" href="js/vendor/styles/github-dark.min.css">
+    <link rel="stylesheet" href="scss/css/all.min.css">
+  </head>
+  <body>
 
-  <div class="parallax" >
+    <!--MAIN AREA - ALSO HOLDS Z LAYER-->
+    <div class="parallax" >
 
-    <div class="background-code parallax-layer parallax-back">
-      <pre id="highlight">
-        <code id="code-area" class="language-cs"></code>
-      </pre>
-      <span id="flashing-input"></span>
-    </div>
+      <!--BACKGROUND TEXT TO LOOK LIKE CODE -->
+      <div class="background-code parallax-layer parallax-back">
+        <pre id="highlight">
+          <code id="code-area" class="language-cs"></code>
+        </pre>
+        <span id="flashing-input"></span>
+      </div>
 
       <div class="main-area">
 
+        <!--HOLDER DIV FOR LAYERING IMAGES-->
         <div class="background-images profile-area">
         </div>
 
+        <!--TOP AREA-->
         <section class="top-area">
           <div class="">
-            <div id="head" class=" row align-items-center text-center">
+            <div id="head" class="row align-items-center text-center">
               <div class="profile-image-area flex-column justify-content-center col-12 mx-auto">
                 <img alt="profile-image" class="rounded-circle profile-picture shadow-lg " src="https://media-exp1.licdn.com/dms/image/C5603AQHos6CRkBA4vw/profile-displayphoto-shrink_800_800/0/1517528623420?e=1635984000&v=beta&t=y0di2uWSUbObwMAMQv_aMQc1Ezc3GDknIreamXglDIQ" />
               </div>
@@ -61,13 +65,12 @@
           </div>
         </section>
 
-
+        <!--NAV BAR -->
         <nav id="navbar" class="navbar navbar-expand-lg rounded sticky-top">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse justify-content-md-center" id="navbar-head">
               <ul class="navbar-nav col-12">
                 <li class="nav-item col-2">
@@ -81,18 +84,50 @@
           </div>
         </nav>
 
+        <!--ABOUT ME-->
         <section id="about-me" class="parallax-layer" >
           <div class="about-me-area ">
             <h1 class="text-center">About Me</h1>
           </div>
         </section>
+
+        <!--MY SKILLS-->
         <section id="my-skills" class="parallax-layer">
           <div class="my-skills-area">
             <h1 class="text-center">
               My Skills
             </h1>
+            <!--Filter Categories-->
+            <div class="categories flex-column d-flex justify-content-center align-items-center">
+              <a class="rounded-pill skill-category col-2 text-center" data-category="">ALL</a>
+            </div>
+            <hr/>
+            <div class="skills flex-wrap d-flex justify-content-center align-items-center">
+
+              <a class="skill m-2 col-xs-6 col-sm-4 col-md-3 col-lg-2" data-categories="HTML" href="#">
+                <div class="poster">
+                  <!-- GOTO EXAMPLE -->
+                  <div class="back-side">
+                    <!--LEVEL OF Skill-->
+                    Skill Level
+                    <div class="skill-level d-flex" data-level="4"></div>
+                    <!-- Description -->
+                    <p></p>
+                  </div>
+                  <div class="front-side">
+                    <!-- Title -->
+                    <h3></h3>
+                    <!-- Show Image -->
+                    <img />
+                  </div>
+                </div>
+              </a>
+
+            </div>
           </div>
         </section>
+
+        <!--EMPLOYMENT-->
         <section id="employment-history">
           <div class="employment-history-area">
             <h1 class="text-center">
@@ -100,6 +135,8 @@
             </h1>
           </div>
         </section>
+
+        <!--PROJECTS-->
         <section id="current-projects" >
           <div class="current-projects-area">
             <h1 class="text-center">
@@ -107,6 +144,8 @@
             </h1>
           </div>
         </section>
+
+        <!--REFERENCES-->
         <section id="references">
           <div class="references-area">
             <h1 class="text-center">
@@ -114,6 +153,8 @@
             </h1>
           </div>
         </section>
+
+        <!--GOALS-->
         <section id="my-goals">
           <div class="my-goals-area">
             <h1 class="text-center">
@@ -123,6 +164,8 @@
         </section>
       </div>
     </div>
+
+    <!--TOP NAV BUTTON-->
     <button id="top-btn" class="hide-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="js/jquery.min.js"></script>
@@ -138,7 +181,6 @@
     <script src="js/vendor/languages/autoit.min.js"></script>
     <script src="js/vendor/languages/csharp.min.js"></script>
     <script src="js/vendor/languages/csp.min.js"></script>
-    <script src="js/smoothscroll.min.js"></script>
     <script src="js/vendor/all.min.js"></script>
     <script src="js/main.js"></script>
 

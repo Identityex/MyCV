@@ -202,7 +202,63 @@
 #my-skills .my-skills-area {
   height: 1000px;
 }
-
+#my-skills .my-skills-area .categories {
+  margin-top: 50px;
+}
+#my-skills .my-skills-area .categories .skill-category {
+  color: white;
+  background: #0d1117;
+  padding: 10px;
+}
+#my-skills .my-skills-area .skills .skill {
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  height: 200px;
+}
+#my-skills .my-skills-area .skills .skill .poster {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+#my-skills .my-skills-area .skills .skill .poster:hover {
+  transform: rotateY(180deg);
+}
+#my-skills .my-skills-area .skills .skill .poster .back-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+#my-skills .my-skills-area .skills .skill .poster .back-side .skill-level div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+}
+#my-skills .my-skills-area .skills .skill .poster .back-side .skill-level div.active {
+  background: green;
+}
+#my-skills .my-skills-area .skills .skill .poster .back-side .skill-level div:not(.active) {
+  background: grey;
+}
+#my-skills .my-skills-area .skills .skill .poster .front-side {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
 #employment-history .employment-history-area {
   height: 1000px;
 }

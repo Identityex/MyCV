@@ -76,5 +76,33 @@ $(document).ready(function () {
         });
     });
 
+    $('.skill-category').click(function () {
+        let skills = $('.skill');
+        let category = $(this).data('category');
+
+        skills.each(function (index, item) {
+           if(item.data('categories').contains(category))
+           {
+               $(item).addClass('hide');
+           }
+           else{
+               $(item).removeClass('hide');
+           }
+        });
+    });
+
+    let maxLevel = 5;
+    $('.skill-level').each(function (index, item) {
+        let numberOfCircles = parseInt($(item).data('level'));
+        for(let i = 0; i < maxLevel; i++)
+        {
+            let element = document.createElement('div');
+            if(i < numberOfCircles)
+            {
+                element.classList.add('active')
+            }
+            $(this).append(element)
+        }
+    })
 });
 

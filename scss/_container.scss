@@ -169,6 +169,78 @@
   }
   .my-skills-area {
     height: 1000px;
+    .categories {
+      margin-top: 50px;
+      .skill-category {
+        color: white;
+        background: #0d1117;
+        padding: 10px;
+      }
+    }
+
+    .skills{
+      .skill{
+        background-color: transparent;
+        text-decoration: none;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        height: 200px;
+        .poster {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+          &:hover {
+            transform: rotateY(180deg);
+          }
+          .back-side {
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+
+            .skill-level {
+              div{
+
+                width: 15px;
+                height: 15px;
+                border-radius: 50px;
+
+                &.active {
+                  background: green;
+                }
+
+                &:not(.active){
+                  background: grey;
+                }
+              }
+            }
+          }
+          .front-side {
+            background-color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            h3{
+
+            }
+            img {
+
+            }
+          }
+        }
+      }
+    }
   }
 }
 

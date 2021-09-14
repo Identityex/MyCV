@@ -13,6 +13,49 @@
 }
 
 /*Variables*/
+/**
+*
+* Testing
+*
+**/
+@media (max-width: 320px) {
+  .include-media-test {
+    background-color: #def;
+  }
+  .include-media-test:before {
+    content: "<=phone";
+  }
+}
+@media (min-width: 321px) {
+  .include-media-test {
+    background-color: #abc;
+  }
+  .include-media-test:before {
+    content: ">phone";
+  }
+}
+@media (min-width: 815px) and (max-width: 1023px) {
+  .include-media-test {
+    background-color: #fed;
+  }
+  .include-media-test:before {
+    content: ">=815px, <desktop";
+  }
+}
+@media (min-width: 1024px) {
+  .include-media-test {
+    background-color: #fab;
+  }
+  .include-media-test:before {
+    content: ">=desktop";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .include-media-test:after {
+    content: "Retina" !important;
+  }
+}
+
 .parallax {
   perspective-origin-x: 100%;
   perspective: 1px;
@@ -233,7 +276,6 @@ h1, h2, h3, h4, h5, h6, p {
   transition: transform 1s;
 }
 #my-skills .my-skills-area .skills .skill {
-  transition: transform 1s;
   background-color: transparent;
   text-decoration: none;
   overflow: hidden;
@@ -297,8 +339,31 @@ h1, h2, h3, h4, h5, h6, p {
   height: 60%;
 }
 
-#employment-history .employment-history-area {
+#experiences .experiences-area {
   height: 1000px;
+}
+#experiences .experiences-area .experience-area {
+  margin-top: 75px;
+}
+#experiences .experiences-area .experience-area h2 {
+  margin-bottom: 45px;
+}
+#experiences .experiences-area .experience-area .experience .careers div:not(.experience-links) {
+  background-color: RGBA(200, 200, 200, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  #experiences .experiences-area .experience-area .experience .careers div:not(.experience-links):first-child {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #experiences .experiences-area .experience-area .experience .careers {
+    border-bottom: 3px solid black;
+    width: 100%;
+  }
 }
 
 #current-projects .current-projects-area {

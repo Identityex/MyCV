@@ -207,7 +207,6 @@ h1, h2, h3, h4, h5, h6, p {
       transition: transform 1s;
       .skill{
 
-        transition: transform 1s;
         background-color: transparent;
         text-decoration: none;
         overflow: hidden;
@@ -284,9 +283,39 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-#employment-history{
-  .employment-history-area {
+
+#experiences{
+  .experiences-area {
     height: 1000px;
+    .experience-area {
+      margin-top: 75px;
+      h2{
+        margin-bottom: 45px;
+      }
+
+      .experience {
+        .careers {
+          div{
+            &:not(.experience-links)
+            {
+              background-color: RGBA(200,200,200,0.9);
+              padding: 20px;
+              border-radius: 15px;
+              @include media("screen", ">=tablet") {
+                &:first-child {
+                  margin-right : 20px;
+                }
+              }
+              margin-bottom: 20px;
+            }
+          }
+          @include media("screen", "<tablet"){
+            border-bottom: 3px solid black;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 

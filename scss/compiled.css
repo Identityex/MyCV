@@ -239,7 +239,8 @@ h1, h2, h3, h4, h5, h6, p {
   transform: translateZ(-1px) scale(2);
 }
 #about-me .about-me-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 
 #my-skills::after {
@@ -247,7 +248,8 @@ h1, h2, h3, h4, h5, h6, p {
   top: -250px;
 }
 #my-skills .my-skills-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 #my-skills .my-skills-area .categories {
   margin-top: 50px;
@@ -340,7 +342,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #experiences .experiences-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 #experiences .experiences-area .experience-area {
   margin-top: 75px;
@@ -359,6 +362,9 @@ h1, h2, h3, h4, h5, h6, p {
     margin-right: 20px;
   }
 }
+#experiences .experiences-area .experience-area .experience .careers div:last-child {
+  margin-left: auto;
+}
 @media screen and (max-width: 767px) {
   #experiences .experiences-area .experience-area .experience .careers {
     border-bottom: 3px solid black;
@@ -367,15 +373,18 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #current-projects .current-projects-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 
 #references .references-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 
 #my-goals .my-goals-area {
-  height: 1000px;
+  min-height: 1000px;
+  height: fit-content;
 }
 
 .is-animated {

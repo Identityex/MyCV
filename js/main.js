@@ -1,5 +1,14 @@
 $(document).ready(function () {
-    let parallax = $('.parallax').first();
+
+    StartImageCarousel();
+    SetupParallaxScroll();
+    SkillAnimation();
+    LoadCodeInBackground();
+
+});
+
+
+function LoadCodeInBackground(){
     const client = new XMLHttpRequest();
     if(typeof url == "undefined")
     {
@@ -18,6 +27,11 @@ $(document).ready(function () {
         hljs.highlightElement(codeArea[0]);
     }
     client.send();
+}
+
+function SetupParallaxScroll()
+{
+    let parallax = $('.parallax').first();
 
     const links = document.querySelectorAll("#navbar-head ul a");
 
@@ -76,6 +90,9 @@ $(document).ready(function () {
         });
     });
 
+}
+
+function SkillAnimation(){
     $('.skill-category').click(function () {
         let skills = $('.skill');
         let category = $(this).data('category');
@@ -108,6 +125,13 @@ $(document).ready(function () {
             }
             $(this).append(element)
         }
-    })
-});
+    });
+}
 
+function StartImageCarousel()
+{
+    $('#text').html($('.active > .carousel-caption').html());
+    $('.carousel').on('slid.bs.carousel', function () {
+        $('#text').html($('.active > .carousel-caption').html());
+    });
+}

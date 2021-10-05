@@ -19,15 +19,9 @@
     <link rel="stylesheet" href="scss/css/main_file.css">
 
     <meta name="theme-color" content="#fafafa">
-    <link rel="stylesheet" href="scss/css/bootstrap.css">
     <link rel="stylesheet" href="scss/compiled.css" />
-    <link rel="stylesheet" href="scss/css/bootstrap.rtl.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-grid.rtl.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-utilities.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-utilities.rtl.css">
-    <link rel="stylesheet" href="scss/css/bootstrap-reboot.rtl.css">
+
+    <link rel="stylesheet" href="scss/css/bootstrap.min.css">
     <link rel="stylesheet" href="js/vendor/styles/github-dark.min.css">
     <link rel="stylesheet" href="scss/css/all.min.css">
   </head>
@@ -266,10 +260,56 @@
             <h1 class="text-center">
               What I Have Worked On
             </h1>
-            <div>
-              <div id="ImageContainer"></div>
-            </div>
+            <!--<div class="current-projects-container d-flex text-center mt-5 flex-wrap">
+              <div id="ImageContainer" class="col-12">
+                <img data-project="ImAffiliated" src="icon.png" />
+                <img style="display: none" data-project="SecondImage" src="codefile.cs"/>
+              </div>
+              <div id="TextContainer" class="col-12 mt-5">
+                <p data-project="ImAffiliated">Im Affiliated is a cool project</p>
+                <p style="display: none" data-project="SecondImage">Just a second image</p>
+              </div>
+            </div>-->
 
+            <div id="ProjectCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt="test"/>
+                  <div class="carousel-caption">
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" >
+                  <img  class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt="test"/>
+                  <div class="carousel-caption">
+                    <h3>Second slide label</h3>
+                    <p>A Bunch of random text</p>
+                  </div>
+                </div>
+                <div class="carousel-item" >
+                  <img  class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt=""/>
+                  <div class="carousel-caption">
+                    <h3>Third slide label</h3>
+                    <p>A Bunch of random text</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Carousel Buttons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#ProjectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#ProjectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </section>
 
@@ -286,7 +326,7 @@
         <section id="my-goals">
           <div class="my-goals-area">
             <h1 class="text-center">
-              My Dreams And Aspirations
+              My Dreams, Aspirations, and Interests
             </h1>
           </div>
         </section>

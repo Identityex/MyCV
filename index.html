@@ -1,128 +1,340 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="scss/css/normalize.css">
-  <link rel="stylesheet" href="scss/css/main_file.css">
+    <link rel="stylesheet" href="scss/css/normalize.css">
+    <link rel="stylesheet" href="scss/css/main_file.css">
 
-  <meta name="theme-color" content="#fafafa">
-  <link rel="stylesheet" href="scss/css/bootstrap.css">
-  <link rel="stylesheet" href="scss/compiled.css" />
-  <link rel="stylesheet" href="scss/css/bootstrap.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-grid.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-grid.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-reboot.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-utilities.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-utilities.rtl.css">
-  <link rel="stylesheet" href="scss/css/bootstrap-reboot.rtl.css">
-  <link rel="stylesheet" href="js/vendor/styles/github-dark.min.css">
-</head>
-<body>
+    <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" href="scss/compiled.css" />
 
-<div class="parallax">
+    <link rel="stylesheet" href="scss/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/styles/github-dark.min.css">
+    <link rel="stylesheet" href="scss/css/all.min.css">
+  </head>
+  <body>
 
-  <div class="background-code parallax-layer parallax-back">
-    <pre id="highlight">
-      <code id="code-area" class="language-cs"></code>
-    </pre>
-    <span id="flashing-input"></span>
-  </div>
+    <!--MAIN AREA - ALSO HOLDS Z LAYER-->
+    <div class="parallax" >
 
-    <div class="main-area parallax-layer parallax-base">
-
-      <div class="background-images profile-area">
+      <!--BACKGROUND TEXT TO LOOK LIKE CODE -->
+      <div class="background-code parallax-layer parallax-back">
+        <pre id="highlight">
+          <code id="code-area" class="language-cs"></code>
+        </pre>
+        <span id="flashing-input"></span>
       </div>
 
-      <section class="top-area">
-        <div class="">
-          <div id="head" class=" row align-items-center text-center">
-            <div class="profile-image-area flex-column justify-content-center col-12 mx-auto">
-              <img alt="profile-image" class="rounded-circle profile-picture shadow-lg " src="https://media-exp1.licdn.com/dms/image/C5603AQHos6CRkBA4vw/profile-displayphoto-shrink_800_800/0/1517528623420?e=1635984000&v=beta&t=y0di2uWSUbObwMAMQv_aMQc1Ezc3GDknIreamXglDIQ" />
-            </div>
-            <div class="">
-              <h2 class="text-center text-shadow">Travis Arsenault</h2>
-              <h4 class="text-center">A Senior Full-Stack Software Developer Looking For The Chance Make His Impact On The World</h4>
+      <div class="main-area">
+
+        <!--HOLDER DIV FOR LAYERING IMAGES-->
+        <div class="background-images profile-area">
+        </div>
+
+        <!--TOP AREA-->
+        <section class="top-area">
+          <div class="">
+            <div id="head" class="row align-items-center text-center">
+              <div class="profile-image-area flex-column justify-content-center col-12 mx-auto">
+                <img alt="profile-image" class="rounded-circle profile-picture shadow-lg " src="https://media-exp1.licdn.com/dms/image/C5603AQHos6CRkBA4vw/profile-displayphoto-shrink_800_800/0/1517528623420?e=1635984000&v=beta&t=y0di2uWSUbObwMAMQv_aMQc1Ezc3GDknIreamXglDIQ" />
+              </div>
+              <div class="">
+                <h2 class="text-center text-shadow">Travis Arsenault</h2>
+                <h4 class="text-center">A Senior Full-Stack Software Developer Looking For The Chance Make His Impact On The World</h4>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-
-      <nav id="navbar" class="navbar navbar-expand-lg rounded sticky-top">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Centered nav only</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-target="#my-skills" aria-controls="my-skills" aria-expanded="false" aria-label="Toggle navigation">Link</a>
-              </li>
-            </ul>
+        <!--NAV BAR -->
+        <nav id="navbar" class="navbar navbar-expand-lg rounded sticky-top">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbar-head">
+              <ul class="navbar-nav col-12">
+                <li class="nav-item col-2">
+                  <a class="nav-link active" aria-current="page" href="#about-me">Centered nav only</a>
+                </li>
+                <li class="nav-item col-2">
+                  <a class="nav-link" href="#my-skills" aria-expanded="false" aria-label="Toggle navigation">Link</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <section id="about-me" >
-        <div class="about-me-area">
-          <h1 class="text-center">About Me</h1>
-        </div>
-      </section>
-      <section id="my-skills">
-        <div class="my-skills-area ">
-          <h1 class="text-center">
-            My Skills
-          </h1>
-        </div>
-      </section>
-      <section id="employment-history">
-        <div class="employment-history-area">
-          <h1 class="text-center">
-            Employment History
-          </h1>
-        </div>
-      </section>
-      <section id="current-projects" >
-        <div class="current-projects-area">
-          <h1 class="text-center">
-            What I'm Working On
-          </h1>
-        </div>
-      </section>
-      <section id="references">
-        <div class="references-area">
-          <h1 class="text-center">
-            References
-          </h1>
-        </div>
-      </section>
-      <section id="my-goals">
-        <div class="my-goals-area">
-          <h1 class="text-center">
-            My Dreams And Aspirations
-          </h1>
-        </div>
-      </section>
+        <!--ABOUT ME-->
+        <section id="about-me" class="parallax-layer" >
+          <div class="about-me-area ">
+            <h1 class="text-center type-anim">About Me</h1>
+          </div>
+        </section>
+
+        <!--MY SKILLS-->
+        <section id="my-skills" class="parallax-layer">
+          <div class="my-skills-area">
+            <h1 class="text-center type-anim">
+              My Skills
+            </h1>
+            <!--Filter Categories-->
+            <div class="categories d-flex justify-content-center align-items-center">
+              <!-- Web-Development, Front-End, Server-Side, Database, Data-Science, Mobile, API, Cloud, Embedded-Systems, Tools, Application, Games, Security -->
+              <a class="rounded-pill skill-category col-2 text-center" data-category="">ALL</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Web">Web</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Front">Front-End</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Back">Back-End</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Database">Database</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Science">Data Science</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Mobile">Mobile</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="API">API</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Cloud">Cloud</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Embedded">Embedded-Systems</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Desktop">Desktop-App</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Games">Games</a>
+              <a class="rounded-pill skill-category col-2 text-center" data-category="Security">Security</a>
+            </div>
+            <hr/>
+            <div class="skills">
+
+              <a class="skill m-2 col-xs-6 col-sm-4 col-md-3 col-lg-2 " data-categories="Web Front Back" href="#">
+                <div class="poster">
+                  <!-- GOTO EXAMPLE -->
+                  <div class="back-side">
+                    <p></p>
+                  </div>
+                  <div class="front-side align-items-center">
+                    <!-- Show Image -->
+                    <i class="fab fa-angular"></i>
+                    <small>Angular</small>
+                    <br/>
+                    <small>Skill Level</small>
+                    <div class="skill-level d-flex justify-content-center" data-level="4"></div>
+                  </div>
+                </div>
+              </a>
+
+              <a class="skill m-2 col-xs-6 col-sm-4 col-md-3 col-lg-2 " data-categories="Web Front Back" href="#">
+                <div class="poster">
+                  <!-- GOTO EXAMPLE -->
+                  <div class="back-side">
+                    <p></p>
+                  </div>
+                  <div class="front-side align-items-center">
+                    <!-- Show Image -->
+                    <i class="fab fa-angular"></i>
+                    <small>Angular</small>
+                    <br/>
+                    <small>Skill Level</small>
+                    <div class="skill-level d-flex justify-content-center" data-level="4"></div>
+                  </div>
+                </div>
+              </a>
+              <a class="skill m-2 col-xs-6 col-sm-4 col-md-3 col-lg-2 " data-categories="Web Front Back" data-skill="angular" href="#">
+                <div class="poster">
+                  <!-- GOTO EXAMPLE -->
+                  <div class="back-side">
+                    <p></p>
+                  </div>
+                  <div class="front-side align-items-center">
+                    <!-- Show Image -->
+                    <i class="fab fa-angular"></i>
+                    <small>Angular</small>
+                    <br/>
+                    <small>Skill Level</small>
+                    <div class="skill-level d-flex justify-content-center" data-level="4"></div>
+                  </div>
+                </div>
+              </a>
+              <a class="skill m-2 col-xs-6 col-sm-4 col-md-3 col-lg-2 " data-categories="Front Back" href="#">
+                <div class="poster">
+                  <!-- GOTO EXAMPLE -->
+                  <div class="back-side">
+                    <p></p>
+                  </div>
+                  <div class="front-side align-items-center">
+                    <!-- Show Image -->
+                    <i class="fab fa-angular"></i>
+                    <small>Angular</small>
+                    <br/>
+                    <small>Skill Level</small>
+                    <div class="skill-level d-flex justify-content-center" data-level="4"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--EMPLOYMENT-->
+        <section id="experiences">
+          <div class="experiences-area container">
+            <h1 class="text-center">
+              My Experiences
+            </h1>
+            <div class="experience-area">
+              <div class="experience-header text-center">
+                <h2>Careers</h2>
+              </div>
+              <div id="intrideo" class="experience">
+                <div class="careers row">
+                  <div class="col-sm-12 col-md-3">
+                    <h4 class="text-center">Intrideo</h4>
+                    <hr />
+                    <small>Some Time - Some Time</small>
+                  </div>
+                  <div class="col-sm-12 col-md-8">
+                    <h4 class="text-center">Intermediate Full-Stack Developer | Fill-in Lead</h4>
+                    <hr/>
+                    <p>Description of what I did here</p>
+                    <div class="experience-links">
+                      <i class="fa fa-link"></i><a href="https://www.facebook.com/intrideo/">Intrideo Facebook</a> |
+                      <a href="#" data-origin="#intrideo" data-skills="scss rest asp-core mvc ioc di vue node redis no-sql sql business" >Highlight Skills Learnt Here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="experience-area">
+              <div class="experience-header text-center">
+                <h2>Freelance</h2>
+              </div>
+              <div id="" class="experience">
+                <div class="careers row">
+                  <div class="col-sm-12 col-md-3">
+                    <h4 class="text-center">Shebafilms Studios</h4>
+                    <hr />
+                    <small>Some Time - Some Time</small>
+                  </div>
+                  <div class="col-sm-12 col-md-8">
+                    <h4 class="text-center">Wordpress Theme Development and Hosting</h4>
+                    <hr/>
+                    <p>Description of what I did here</p>
+                    <div class="experience-links">
+                      <i class="fa fa-link"></i><a href="https://www.researchtvcanada.ca" target="_blank">ResearchTV</a> |
+                      <a href="#intrideo" data-skills="wordpress php css web-design server domains" >Highlight Skills Learnt Here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="experience-area">
+              <div class="experience-header text-center">
+                <h2>Education</h2>
+              </div>
+              <div id="college" class="experience">
+                <div class="careers row">
+                  <div class="col-sm-12 col-md-3">
+                    <h4 class="text-center">Confederation College</h4>
+                    <hr />
+                    <small>Some Time - Some Time</small>
+                  </div>
+                  <div class="col-sm-12 col-md-8">
+                    <h4 class="text-center">Computer Programming</h4>
+                    <hr/>
+                    <p>Description of what I did here</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--PROJECTS-->
+        <section id="current-projects" >
+          <div class="current-projects-area">
+            <h1 class="text-center">
+              What I Have Worked On
+            </h1>
+            <!--<div class="current-projects-container d-flex text-center mt-5 flex-wrap">
+              <div id="ImageContainer" class="col-12">
+                <img data-project="ImAffiliated" src="icon.png" />
+                <img style="display: none" data-project="SecondImage" src="codefile.cs"/>
+              </div>
+              <div id="TextContainer" class="col-12 mt-5">
+                <p data-project="ImAffiliated">Im Affiliated is a cool project</p>
+                <p style="display: none" data-project="SecondImage">Just a second image</p>
+              </div>
+            </div>-->
+
+            <div id="ProjectCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#ProjectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt="test"/>
+                  <div class="carousel-caption">
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" >
+                  <img  class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt="test"/>
+                  <div class="carousel-caption">
+                    <h3>Second slide label</h3>
+                    <p>A Bunch of random text</p>
+                  </div>
+                </div>
+                <div class="carousel-item" >
+                  <img  class="d-block w-100" data-project="ImAffiliated" src="icon.png"  alt=""/>
+                  <div class="carousel-caption">
+                    <h3>Third slide label</h3>
+                    <p>A Bunch of random text</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Carousel Buttons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#ProjectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#ProjectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!--REFERENCES-->
+        <section id="references">
+          <div class="references-area">
+            <h1 class="text-center">
+              References
+            </h1>
+          </div>
+        </section>
+
+        <!--GOALS-->
+        <section id="my-goals">
+          <div class="my-goals-area">
+            <h1 class="text-center">
+              My Dreams, Aspirations, and Interests
+            </h1>
+          </div>
+        </section>
+      </div>
     </div>
 
-
+    <!--TOP NAV BUTTON-->
+    <button id="top-btn" class="hide-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -137,6 +349,7 @@
     <script src="js/vendor/languages/autoit.min.js"></script>
     <script src="js/vendor/languages/csharp.min.js"></script>
     <script src="js/vendor/languages/csp.min.js"></script>
+    <script src="js/vendor/all.min.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -145,7 +358,5 @@
       ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
-  </div>
-</body>
-
+  </body>
 </html>

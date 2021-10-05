@@ -17,13 +17,37 @@
   bottom: 0;
   left: 0;
 }
-.parallax-base {
-  transform: translateZ(0);
-}
+
 .parallax-back {
-  transform: translateZ(-1px) scale(1.5);
+  transform: translateZ(-2px) scale(2.5);
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  text-shadow : 1px 1px 20px #D2D2D2;
+}
+
+#top-btn {
+  display: inline-block; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 30px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black ; /* Set a background color */
+  opacity: 80%;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  transition: all 1s ease 0s;
+  width: 50px;
+  height: 35px
+}
+
+.hide-top-btn{
+  right: -60px !important; /* Place the button 30px from the right */
+}
 
 .main-area{
   background-color: RGBA(150,150,150,0.4);
@@ -34,16 +58,31 @@
     height: 80px;
   }
 
+  .profile-image-area {
+    img{
+      box-shadow: $shadow !important;
+    }
+    margin-bottom: 15px;
+  }
+
+  .hide-nav {
+    top : -100px;
+  }
+
   nav{
+
+    transition: all 1s ease 0s;
     ul {
       display: flex;
       align-content: center;
       justify-content: center;
       li {
         &:not(:last-child){
-          border-right: 1px solid black ;
+          margin-right: 15px;
         }
+        box-shadow: $shadow;
         text-align: center;
+        border-radius: 50px;
         a{
           &:hover, &:focus{
             color: lighten(orangered, 20%);
@@ -53,11 +92,11 @@
           color: orangered;
         }
         height: fit-content;
-        width: 400px;
         background: darkslateblue;
         opacity: 0.9;
       }
     }
+    margin-bottom: 20px;
   }
 
   .top-area{
@@ -66,13 +105,14 @@
   section {
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-
+    overflow: hidden;
 
     &:not(.top-area){
       border-top: 5px $text-color solid;
       padding-top: 25px;
       padding-bottom: 25px;
     }
+
     position: relative;
     &::after{
       content: "";
@@ -86,6 +126,8 @@
       position: absolute;
       background-size: cover;
       z-index: -1;
+      transform: translateZ(-1px) scale(2);
+      background-position: 50% 0;
     }
 
     h1{
@@ -115,46 +157,207 @@
 }
 
 #about-me{
-  position: relative;
   &::after{
     background-image: url('/img/about-me-background.jpg');
+    transform: translateZ(-1px) scale(2);
   }
   .about-me-area {
-    height: 1000px;
+    min-height: 1000px;
+    height: fit-content;
   }
 }
-
 
 #my-skills{
+  &::after{
+    background-image: url('/img/roses-background.jpg');
+    top: -250px;
+  }
   .my-skills-area {
-    height: 1000px;
+    min-height: 1000px;
+    height: fit-content;
+    .categories {
+      margin-top: 50px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      .skill-category {
+
+        box-shadow: 2px 2px 20px 2px rgb(0 0 0 / 60%);
+        border: cadetblue dotted 1.8px;
+        text-decoration: none;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:not(:last-child)
+        {
+          margin-right: 5px;
+        }
+
+        color: white;
+        background: #0d1117;
+        padding: 10px;
+      }
+    }
+
+    .skills{
+
+      width: 80%;
+      margin: auto;
+
+      transition: transform 1s;
+      .skill{
+
+        background-color: transparent;
+        text-decoration: none;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        height: 200px;
+        border: black solid 5px;
+        border-radius: 15px;
+        display: inline-block;
+        .poster {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+          color: black;
+          &:hover {
+            transform: rotateY(180deg);
+          }
+
+          .skill-level {
+            div{
+
+              width: 15px;
+              height: 15px;
+              border-radius: 50px;
+              &:not(:last-child)
+              {
+                margin-right:5px;
+              }
+
+              &.active {
+                background: green;
+              }
+
+              &:not(.active){
+                background: grey;
+              }
+            }
+          }
+          .back-side {
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+          }
+          .front-side {
+            background-color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            h3{
+
+            }
+            p {
+              color : black;
+            }
+            i, svg, img {
+              width: 100%;
+              height:60%
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-#employment-history{
-  .employment-history-area {
-    height: 1000px;
+
+#experiences{
+  .experiences-area {
+    min-height: 1000px;
+    height: fit-content;
+    .experience-area {
+      margin-top: 75px;
+      h2{
+        margin-bottom: 45px;
+      }
+
+      .experience {
+        .careers {
+          div{
+            &:not(.experience-links)
+            {
+              background-color: RGBA(200,200,200,0.9);
+              padding: 20px;
+              border-radius: 15px;
+              @include media("screen", ">=tablet") {
+                &:first-child {
+                  margin-right : 20px;
+                }
+              }
+              margin-bottom: 20px;
+            }
+            &:last-child {
+              margin-left: auto;
+            }
+          }
+          @include media("screen", "<tablet"){
+            border-bottom: 3px solid black;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
 
 #current-projects{
-
   .current-projects-area {
-    height: 1000px;
+    min-height: 1000px;
+    height: fit-content;
   }
 }
 
 
 #references{
   .references-area {
-    height: 1000px;
+    min-height: 1000px;
+    height: fit-content;
   }
 }
 
 
 #my-goals{
   .my-goals-area {
-    height: 1000px;
+    min-height: 1000px;
+    height: fit-content;
+  }
+}
+
+.is-animated {
+  animation: .6s zoom-in;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(.1);
+  }
+  100% {
+    transform: none;
   }
 }
